@@ -1,0 +1,535 @@
+2024-11-20 00:56:32 - Starting NotificationsServiceApplication using Java 20.0.2.1 with PID 11752 (C:\personal_projects\OrderProcessingSystem\NotificationsService\target\classes started by wisp1 in C:\personal_projects\OrderProcessingSystem\NotificationsService)
+2024-11-20 00:56:32 - No active profile set, falling back to 1 default profile: "default"
+2024-11-20 00:56:34 - Tomcat initialized with port 8083 (http)
+2024-11-20 00:56:34 - Initializing ProtocolHandler ["http-nio-8083"]
+2024-11-20 00:56:34 - Starting service [Tomcat]
+2024-11-20 00:56:34 - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-20 00:56:34 - Initializing Spring embedded WebApplicationContext
+2024-11-20 00:56:34 - Root WebApplicationContext: initialization completed in 1651 ms
+2024-11-20 00:56:35 - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = NotificationsService-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-11-20 00:56:35 - Kafka version: 3.7.1
+2024-11-20 00:56:35 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:35 - Kafka startTimeMs: 1732046195141
+2024-11-20 00:56:35 - App info kafka.admin.client for NotificationsService-admin-0 unregistered
+2024-11-20 00:56:35 - Metrics scheduler closed
+2024-11-20 00:56:35 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:56:35 - Metrics reporters closed
+2024-11-20 00:56:35 - Starting ProtocolHandler ["http-nio-8083"]
+2024-11-20 00:56:35 - Tomcat started on port 8083 (http) with context path '/'
+2024-11-20 00:56:35 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification_service_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification_service_group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-20 00:56:35 - initializing Kafka metrics collector
+2024-11-20 00:56:35 - Kafka version: 3.7.1
+2024-11-20 00:56:35 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:35 - Kafka startTimeMs: 1732046195519
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Subscribed to topic(s): sent_orders
+2024-11-20 00:56:35 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification_service_group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification_service_group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-20 00:56:35 - initializing Kafka metrics collector
+2024-11-20 00:56:35 - Kafka version: 3.7.1
+2024-11-20 00:56:35 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:35 - Kafka startTimeMs: 1732046195542
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Subscribed to topic(s): sent_orders
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Cluster ID: zrqTUnzkSOOSXERFPbIKuA
+2024-11-20 00:56:35 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification_service_group-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification_service_group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-11-20 00:56:35 - initializing Kafka metrics collector
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Cluster ID: zrqTUnzkSOOSXERFPbIKuA
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - Kafka version: 3.7.1
+2024-11-20 00:56:35 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:35 - Kafka startTimeMs: 1732046195559
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Subscribed to topic(s): sent_orders
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Request joining group due to: need to re-join with the given member-id: consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Request joining group due to: need to re-join with the given member-id: consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Cluster ID: zrqTUnzkSOOSXERFPbIKuA
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Successfully joined group with generation Generation{generationId=29, memberId='consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Successfully joined group with generation Generation{generationId=29, memberId='consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb', protocol='range'}
+2024-11-20 00:56:35 - Started NotificationsServiceApplication in 3.912 seconds (process running for 4.973)
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Request joining group due to: need to re-join with the given member-id: consumer-notification_service_group-3-9afab958-ad31-4858-a406-a8f4a8e80366
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=29, memberId='consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException)
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Finished assignment for group at generation 29: {consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb=Assignment(partitions=[sent_orders-0, sent_orders-1]), consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea=Assignment(partitions=[sent_orders-2])}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=29, memberId='consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException)
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] (Re-)joining group
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Successfully joined group with generation Generation{generationId=30, memberId='consumer-notification_service_group-3-9afab958-ad31-4858-a406-a8f4a8e80366', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Successfully joined group with generation Generation{generationId=30, memberId='consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Successfully joined group with generation Generation{generationId=30, memberId='consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Finished assignment for group at generation 30: {consumer-notification_service_group-3-9afab958-ad31-4858-a406-a8f4a8e80366=Assignment(partitions=[sent_orders-2]), consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb=Assignment(partitions=[sent_orders-0]), consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea=Assignment(partitions=[sent_orders-1])}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Successfully synced group in generation Generation{generationId=30, memberId='consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Successfully synced group in generation Generation{generationId=30, memberId='consumer-notification_service_group-3-9afab958-ad31-4858-a406-a8f4a8e80366', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Successfully synced group in generation Generation{generationId=30, memberId='consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea', protocol='range'}
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Notifying assignor about the new Assignment(partitions=[sent_orders-0])
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Notifying assignor about the new Assignment(partitions=[sent_orders-1])
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Notifying assignor about the new Assignment(partitions=[sent_orders-2])
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Adding newly assigned partitions: sent_orders-0
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Adding newly assigned partitions: sent_orders-2
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Adding newly assigned partitions: sent_orders-1
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Found no committed offset for partition sent_orders-2
+2024-11-20 00:56:35 - Setting offset for partition sent_orders-0 to the committed offset FetchPosition{offset=21, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}
+2024-11-20 00:56:35 - Setting offset for partition sent_orders-1 to the committed offset FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}
+2024-11-20 00:56:35 - notification_service_group: partitions assigned: [sent_orders-0]
+2024-11-20 00:56:35 - notification_service_group: partitions assigned: [sent_orders-1]
+2024-11-20 00:56:35 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Resetting offset for partition sent_orders-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}.
+2024-11-20 00:56:35 - notification_service_group: partitions assigned: [sent_orders-2]
+2024-11-20 00:56:40 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:56:40 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:56:57 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:56:57 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:28 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:28 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:34 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:34 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:42 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:42 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:46 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:46 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:55 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:55 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:58:00 - Dear user! Order has been successfully delivered! Order details: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:58:00 - Notification sent for order: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Revoke previously assigned partitions sent_orders-0
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Revoke previously assigned partitions sent_orders-1
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Revoke previously assigned partitions sent_orders-2
+2024-11-20 00:59:28 - notification_service_group: partitions revoked: [sent_orders-1]
+2024-11-20 00:59:28 - notification_service_group: partitions revoked: [sent_orders-2]
+2024-11-20 00:59:28 - notification_service_group: partitions revoked: [sent_orders-0]
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Member consumer-notification_service_group-2-c4f9edb9-a82f-401e-941a-1885ad9c14ea sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Member consumer-notification_service_group-1-c07eccfa-c720-4949-a150-3183a2188deb sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Member consumer-notification_service_group-3-9afab958-ad31-4858-a406-a8f4a8e80366 sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Unsubscribed all topics or patterns and assigned partitions
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Unsubscribed all topics or patterns and assigned partitions
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Unsubscribed all topics or patterns and assigned partitions
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-2, groupId=notification_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-3, groupId=notification_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - [Consumer clientId=consumer-notification_service_group-1, groupId=notification_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:28 - Metrics scheduler closed
+2024-11-20 00:59:28 - Metrics scheduler closed
+2024-11-20 00:59:28 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:59:28 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:59:28 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-20 00:59:28 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-20 00:59:28 - Metrics reporters closed
+2024-11-20 00:59:28 - Metrics reporters closed
+2024-11-20 00:59:28 - App info kafka.consumer for consumer-notification_service_group-3 unregistered
+2024-11-20 00:59:28 - App info kafka.consumer for consumer-notification_service_group-2 unregistered
+2024-11-20 00:59:28 - notification_service_group: Consumer stopped
+2024-11-20 00:59:28 - notification_service_group: Consumer stopped
+2024-11-20 00:59:28 - Metrics scheduler closed
+2024-11-20 00:59:28 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:59:28 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-20 00:59:28 - Metrics reporters closed
+2024-11-20 00:59:28 - App info kafka.consumer for consumer-notification_service_group-1 unregistered
+2024-11-20 00:59:28 - notification_service_group: Consumer stopped

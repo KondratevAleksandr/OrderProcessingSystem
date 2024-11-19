@@ -1,0 +1,657 @@
+2024-11-20 00:56:28 - Starting ShippingServiceApplication using Java 20.0.2.1 with PID 12544 (C:\personal_projects\OrderProcessingSystem\ShippingService\target\classes started by wisp1 in C:\personal_projects\OrderProcessingSystem\ShippingService)
+2024-11-20 00:56:28 - No active profile set, falling back to 1 default profile: "default"
+2024-11-20 00:56:31 - Tomcat initialized with port 8082 (http)
+2024-11-20 00:56:31 - Initializing ProtocolHandler ["http-nio-8082"]
+2024-11-20 00:56:31 - Starting service [Tomcat]
+2024-11-20 00:56:31 - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-20 00:56:31 - Initializing Spring embedded WebApplicationContext
+2024-11-20 00:56:31 - Root WebApplicationContext: initialization completed in 3053 ms
+2024-11-20 00:56:33 - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = ShippingService-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-11-20 00:56:33 - Kafka version: 3.7.1
+2024-11-20 00:56:33 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:33 - Kafka startTimeMs: 1732046193353
+2024-11-20 00:56:33 - App info kafka.admin.client for ShippingService-admin-0 unregistered
+2024-11-20 00:56:33 - Metrics scheduler closed
+2024-11-20 00:56:33 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:56:33 - Metrics reporters closed
+2024-11-20 00:56:33 - Starting ProtocolHandler ["http-nio-8082"]
+2024-11-20 00:56:33 - Tomcat started on port 8082 (http) with context path '/'
+2024-11-20 00:56:33 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-shipping_service_group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = shipping_service_group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-20 00:56:33 - initializing Kafka metrics collector
+2024-11-20 00:56:33 - Kafka version: 3.7.1
+2024-11-20 00:56:33 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:33 - Kafka startTimeMs: 1732046193965
+2024-11-20 00:56:33 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Subscribed to topic(s): payed_orders
+2024-11-20 00:56:33 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-shipping_service_group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = shipping_service_group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-20 00:56:33 - initializing Kafka metrics collector
+2024-11-20 00:56:33 - Kafka version: 3.7.1
+2024-11-20 00:56:33 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:33 - Kafka startTimeMs: 1732046193990
+2024-11-20 00:56:33 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Subscribed to topic(s): payed_orders
+2024-11-20 00:56:33 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Cluster ID: zrqTUnzkSOOSXERFPbIKuA
+2024-11-20 00:56:33 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-shipping_service_group-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = shipping_service_group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-11-20 00:56:33 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-11-20 00:56:33 - initializing Kafka metrics collector
+2024-11-20 00:56:33 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - Kafka version: 3.7.1
+2024-11-20 00:56:34 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:34 - Kafka startTimeMs: 1732046194006
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Subscribed to topic(s): payed_orders
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Cluster ID: zrqTUnzkSOOSXERFPbIKuA
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - Started ShippingServiceApplication in 6.771 seconds (process running for 7.799)
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Request joining group due to: need to re-join with the given member-id: consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Request joining group due to: need to re-join with the given member-id: consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Cluster ID: zrqTUnzkSOOSXERFPbIKuA
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Discovered group coordinator localhost:9092 (id: 2147482646 rack: null)
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Successfully joined group with generation Generation{generationId=12, memberId='consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Successfully joined group with generation Generation{generationId=12, memberId='consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Request joining group due to: need to re-join with the given member-id: consumer-shipping_service_group-3-1105875f-c3ff-460a-a11c-f629a1fd65ea
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Finished assignment for group at generation 12: {consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1=Assignment(partitions=[payed_orders-0, payed_orders-1]), consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e=Assignment(partitions=[payed_orders-2])}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=12, memberId='consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException)
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] SyncGroup failed: The group began another rebalance. Need to re-join the group. Sent generation was Generation{generationId=12, memberId='consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Request joining group due to: rebalance failed due to 'The group is rebalancing, so a rejoin is needed.' (RebalanceInProgressException)
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] (Re-)joining group
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Successfully joined group with generation Generation{generationId=13, memberId='consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Successfully joined group with generation Generation{generationId=13, memberId='consumer-shipping_service_group-3-1105875f-c3ff-460a-a11c-f629a1fd65ea', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Successfully joined group with generation Generation{generationId=13, memberId='consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Finished assignment for group at generation 13: {consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1=Assignment(partitions=[payed_orders-0]), consumer-shipping_service_group-3-1105875f-c3ff-460a-a11c-f629a1fd65ea=Assignment(partitions=[payed_orders-2]), consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e=Assignment(partitions=[payed_orders-1])}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Successfully synced group in generation Generation{generationId=13, memberId='consumer-shipping_service_group-3-1105875f-c3ff-460a-a11c-f629a1fd65ea', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Successfully synced group in generation Generation{generationId=13, memberId='consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Successfully synced group in generation Generation{generationId=13, memberId='consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e', protocol='range'}
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Notifying assignor about the new Assignment(partitions=[payed_orders-2])
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Notifying assignor about the new Assignment(partitions=[payed_orders-0])
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Notifying assignor about the new Assignment(partitions=[payed_orders-1])
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Adding newly assigned partitions: payed_orders-0
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Adding newly assigned partitions: payed_orders-2
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Adding newly assigned partitions: payed_orders-1
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Found no committed offset for partition payed_orders-1
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Found no committed offset for partition payed_orders-2
+2024-11-20 00:56:34 - Setting offset for partition payed_orders-0 to the committed offset FetchPosition{offset=24, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}
+2024-11-20 00:56:34 - shipping_service_group: partitions assigned: [payed_orders-0]
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Resetting offset for partition payed_orders-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}.
+2024-11-20 00:56:34 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Resetting offset for partition payed_orders-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1001 rack: null)], epoch=0}}.
+2024-11-20 00:56:34 - shipping_service_group: partitions assigned: [payed_orders-2]
+2024-11-20 00:56:34 - shipping_service_group: partitions assigned: [payed_orders-1]
+2024-11-20 00:56:39 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:56:39 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:56:40 - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = ShippingService-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-11-20 00:56:40 - initializing Kafka metrics collector
+2024-11-20 00:56:40 - [Producer clientId=ShippingService-producer-1] Instantiated an idempotent producer.
+2024-11-20 00:56:40 - Kafka version: 3.7.1
+2024-11-20 00:56:40 - Kafka commitId: e2494e6ffb89f828
+2024-11-20 00:56:40 - Kafka startTimeMs: 1732046200055
+2024-11-20 00:56:40 - [Producer clientId=ShippingService-producer-1] Cluster ID: zrqTUnzkSOOSXERFPbIKuA
+2024-11-20 00:56:40 - [Producer clientId=ShippingService-producer-1] ProducerId set to 2005 with epoch 0
+2024-11-20 00:56:40 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:56:40 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:56:57 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:56:57 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:56:57 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:56:57 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:57:28 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:28 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:28 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:57:28 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:57:34 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:34 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:34 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:57:34 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:57:42 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:42 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:42 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:57:42 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:57:46 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:46 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:46 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:57:46 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:57:55 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:55 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:57:55 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:57:55 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:58:00 - Preparing shipment for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:58:00 - Sending shipping info: Shipment sent for: Payment successful for: {
+    "Order: Новый"
+}
+2024-11-20 00:58:00 - Shipping info sent successfully to topic 'sent_orders'
+2024-11-20 00:58:00 - Shipment processed and sent to 'sent_orders' topic
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Revoke previously assigned partitions payed_orders-1
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Revoke previously assigned partitions payed_orders-0
+2024-11-20 00:59:25 - shipping_service_group: partitions revoked: [payed_orders-1]
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Revoke previously assigned partitions payed_orders-2
+2024-11-20 00:59:25 - shipping_service_group: partitions revoked: [payed_orders-0]
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Member consumer-shipping_service_group-1-cf796c91-5fc6-43bd-9685-e06f0909aaa1 sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2024-11-20 00:59:25 - shipping_service_group: partitions revoked: [payed_orders-2]
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Member consumer-shipping_service_group-2-8638c4b8-3f68-4996-a74e-772dc7f1d32e sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Member consumer-shipping_service_group-3-1105875f-c3ff-460a-a11c-f629a1fd65ea sending LeaveGroup request to coordinator localhost:9092 (id: 2147482646 rack: null) due to the consumer unsubscribed from all topics
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Unsubscribed all topics or patterns and assigned partitions
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Unsubscribed all topics or patterns and assigned partitions
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Unsubscribed all topics or patterns and assigned partitions
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-1, groupId=shipping_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-3, groupId=shipping_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - [Consumer clientId=consumer-shipping_service_group-2, groupId=shipping_service_group] Request joining group due to: consumer pro-actively leaving the group
+2024-11-20 00:59:25 - Metrics scheduler closed
+2024-11-20 00:59:25 - Metrics scheduler closed
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-20 00:59:25 - Metrics reporters closed
+2024-11-20 00:59:25 - Metrics reporters closed
+2024-11-20 00:59:25 - App info kafka.consumer for consumer-shipping_service_group-1 unregistered
+2024-11-20 00:59:25 - App info kafka.consumer for consumer-shipping_service_group-3 unregistered
+2024-11-20 00:59:25 - shipping_service_group: Consumer stopped
+2024-11-20 00:59:25 - shipping_service_group: Consumer stopped
+2024-11-20 00:59:25 - Metrics scheduler closed
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-20 00:59:25 - Metrics reporters closed
+2024-11-20 00:59:25 - App info kafka.consumer for consumer-shipping_service_group-2 unregistered
+2024-11-20 00:59:25 - shipping_service_group: Consumer stopped
+2024-11-20 00:59:25 - [Producer clientId=ShippingService-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-11-20 00:59:25 - Metrics scheduler closed
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-11-20 00:59:25 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-11-20 00:59:25 - Metrics reporters closed
+2024-11-20 00:59:25 - App info kafka.producer for ShippingService-producer-1 unregistered
